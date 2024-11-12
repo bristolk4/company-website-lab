@@ -68,14 +68,15 @@ app.get('/history', (req, res) => {
 });
 
 
-
-app.get('/pastwork/:project', (req, res) => {
+app.get('/pastwork', (req, res) => {
     const project = req.params.project 
     res.render('pastwork.ejs', {pastwork: pastwork, project: project})
 });
 
+
 app.get('/staff', (req, res) => {
-    res.render('staff.ejs', {staff: staff})
+    const staffmember = req.params.staffmember
+    res.render('staff.ejs', {staff: staff, staffmember: staffmember})
 });
 
 app.get('/externallinks', (req, res) => {
