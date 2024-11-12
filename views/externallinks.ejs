@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    <h1 style="text-decoration:underline">External Links</h1>
+        <% externallinks.forEach((item) => { %>           
+            <h3><%= item.description %></h3>
+            <p><%= item.link %></p>
+            <% }); %>
+
+</body>
+</html>
