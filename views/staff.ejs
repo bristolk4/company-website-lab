@@ -8,8 +8,8 @@
 <body>
     <%- include('./partials/nav') %>
     <h1>Staff</h1>
-        <% staff.forEach((item) => { %>           
-            <a href="#"> <%= item.name %> </a>
-            <% }); %>
+    <% staff.forEach((item, index) => { %>           
+        <a href="/showstaff/<%= index %>"> <%= item.name %> </a>
+        <% }); %>
 </body>
 </html>

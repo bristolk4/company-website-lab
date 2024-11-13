@@ -67,17 +67,34 @@ app.get('/history', (req, res) => {
     res.render('history.ejs')
 });
 
-
 app.get('/pastwork', (req, res) => {
-    const project = req.params.project 
-    res.render('pastwork.ejs', {pastwork: pastwork, project: project})
+    // const project = req.params.project 
+    res.render('pastwork.ejs', {pastwork: pastwork})
 });
 
+app.get("/showwork/:projectId", (req, res) => {
+  const projectId = req.params.projectId
+  console.log(projectId)
+console.log(pastwork[projectId])
+  res.render("showwork.ejs", {
+    project: pastwork[projectId]
+  }
+  )
+})
 
 app.get('/staff', (req, res) => {
-    const staffmember = req.params.staffmember
-    res.render('staff.ejs', {staff: staff, staffmember: staffmember})
+  res.render('staff.ejs', {staff: staff})
 });
+
+app.get("/showstaff/:memberId", (req, res) => {
+  const memberId = req.params.memberId
+  console.log(memberId)
+console.log(staff[memberId])
+  res.render("showstaff.ejs", {
+    member: staff[memberId]
+  }
+  )
+})
 
 app.get('/externallinks', (req, res) => {
     res.render('externallinks.ejs', {externallinks: externallinks})
