@@ -1,0 +1,16 @@
+body {
+    background: brown;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    text-align: center;
+}
+
+#pastwork {
+    display: flex;
+    flex-direction: column;
+}
+
+#staff {
+    display: flex;
+    flex-direction: column;
+}
